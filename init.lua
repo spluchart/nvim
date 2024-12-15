@@ -1,0 +1,1 @@
+require("kurwa_config")
