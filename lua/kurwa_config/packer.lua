@@ -25,4 +25,8 @@ return require('packer').startup(function(use)
   {run = ':TSUpdate'}
   )
 
+  use (
+	  'mbbill/undotree'
+  )
+
 end)
