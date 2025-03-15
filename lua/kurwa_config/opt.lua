@@ -1,12 +1,9 @@
-vim.opt.number = true
-vim.opt.relativenumber = true
+local o = vim.opt  -- alias
 
-vim.opt.mouse = 'a'
+o.number = true
+o.relativenumber = true
+
+o.mouse = 'a'
 
 -- Sync clipboard between neovim and OS
-vim.opt.clipboard = 'unnamedplus'
-
--- Tab vs. space
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true	    
+o.clipboard = 'unnamedplus'
