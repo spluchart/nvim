@@ -33,4 +33,12 @@ return require('packer').startup(function(use)
 	  'lervag/vimtex'
   )
 
+  use ({
+	  'benomahony/uv.nvim',
+	  config = function()
+		  require('uv').setup()
+	  end
+  })
+
+
 end)
