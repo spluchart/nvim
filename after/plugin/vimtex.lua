@@ -11,3 +11,14 @@ end
 -- VimTeX use latexmk as the default compiler backend.
 -- Uncomment if you want to use a different one.
 -- vim.g.vimtex_compiler_method = 'latexrun'
+
+vim.g.vimtex_compiler_latexmk = {
+	-- aux_dir = "auxil", -- create a directory called aux that will contain all the auxiliary files
+	options = {
+        '-verbose',
+        '-file-line-error',
+        '-synctex=1',
+        '-interaction=nonstopmode',
+        '-shell-escape',
+	},
+}
