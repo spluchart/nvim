@@ -1,4 +1,5 @@
 require("kurwa_config.packer")
 require("kurwa_config.remap")
 require("kurwa_config.opt")
+require("kurwa_config.statusbar")
 print("kurwa config!")
