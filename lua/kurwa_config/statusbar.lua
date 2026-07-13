@@ -1,5 +1,5 @@
 local statusline = {
-  ' %t',
+  '%F',
   '%r',
   '%m',
   '%=',
