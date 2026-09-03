@@ -40,5 +40,32 @@ return require('packer').startup(function(use)
 	  end
   })
 
+	use({
+		"saghen/blink.cmp",
+		tag = "v1.*",
+		requires = {
+			"rafamadriz/friendly-snippets",
+			{ "saghen/blink.compat", tag = "v2.*" },
+			"micangl/cmp-vimtex",
+		},
+		config = function()
+			require("blink.cmp").setup({
+				sources = {
+					default = { "lsp", "path", "snippets", "buffer", "vimtex" },
+					providers = {
+						vimtex = {
+							name = "vimtex",
+							module = "blink.compat.source",
+							enabled = function()
+								return vim.bo.filetype == "tex"
+							end,
+                            async=true,
+						},
+					},
+				},
+				signature = { enabled = true},
+			})
+		end,
+	})
 
 end)
